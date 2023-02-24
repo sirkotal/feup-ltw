@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Imperial+Script&family=Ruda&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Imperial Script', sans-serif;
+    font-size: 10rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h2{
+    text-align: right;
+    font-family: 'Ruda', sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    border-bottom-color: black;
+    border-bottom-width: medium;
+    border-bottom-style: solid;
+
+}
+
+main{
+    font-size: 1.75rem;
+    text-align: left;
+    font-family: 'Crimson Pro', serif;
+    background-color: rgb(250, 235, 215);
+    margin-left: 22.5rem;
+    margin-right: 22.5rem;
+    padding: 2rem;
+}
+
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.box{
+    background-color: rgba(250, 128, 114, 0.314);
+    margin: 2rem 0 2rem 0;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-top: dashed;
+    border-left: dashed;
+    border-bottom: dashed;
+    border-right: solid;
+    border-top-color: rgba(250, 128, 114, 0.314);
+    border-left-color: rgba(250, 128, 114, 0.314);
+    border-right-color: rgb(250, 128, 114);
+    border-bottom-color: rgba(250, 128, 114, 0.314);
+    border-right-width: 0.5rem;
+}
+
+.box > dl > dt ~ dt {
+    margin-top: 1rem;
+}
+
+dl{
+    margin-left: 1rem;
+    text-transform: capitalize;
+}
+
+strong{
+    color: rgb(83, 169, 129);
+}
+
+p{
+    line-height: 1.4;
+}
+
+ul{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+ol{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li{
+    margin-top: 1.5rem;
+}
