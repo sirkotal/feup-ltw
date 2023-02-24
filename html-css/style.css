@@ -58,6 +58,10 @@ main{
     border-right-width: 0.5rem;
 }
 
+.box > dl > dt ~ dt {
+    margin-top: 1rem;
+}
+
 dl{
     margin-left: 1rem;
     text-transform: capitalize;
