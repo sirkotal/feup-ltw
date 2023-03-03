@@ -61,12 +61,58 @@ body > header:first-of-type {
     padding: 1rem;
 }
 
-#signup > a:first-child {
-    border-right: 0.1rem solid white;
+#signup > * {
+    border-right: 1px solid white;
+    padding-inline: 12px;
 }
 
 #signup > a {
     color: var(--color-background);
     padding: 1rem;
-    padding-inline: 12px;
+}
+
+#signup > a:hover {
+    color: var(--color-gray);
+}
+
+#signup > :first-child {
+    padding-left: 0;
+}
+
+#signup > :last-child {
+    border: none;
+    padding-right: 0;
+}
+
+#menu input {
+    display: none;
+}
+
+nav > ul > li {
+    border-top: 0.3rem solid var(--color1);
+    padding: 1rem;
+}
+
+nav > ul > li:nth-child(1){
+    border-color: var(--color1);
+}
+
+nav > ul > li:nth-child(2){
+    border-color: var(--color2);
+}
+
+nav > ul > li:nth-child(3){
+    border-color: var(--color3);
+}
+
+nav > ul > li:nth-child(4){
+    border-color: var(--color4);
+}
+
+nav > ul > li:nth-child(5){
+    border-color: var(--color5);
+}
+
+nav > ul > li:nth-child(6){
+    border-color: var(--color6);
 }
