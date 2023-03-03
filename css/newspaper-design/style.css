@@ -62,6 +62,7 @@ body > header:first-of-type {
 }
 
 #signup > * {
+    font-family: var(--sans-font);
     border-right: 1px solid white;
     padding-inline: 12px;
 }
@@ -88,31 +89,71 @@ body > header:first-of-type {
     display: none;
 }
 
-nav > ul > li {
+nav ul {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+nav ul li {
     border-top: 0.3rem solid var(--color1);
     padding: 1rem;
 }
 
-nav > ul > li:nth-child(1){
+nav ul li:hover {
+    background-color: var(--color-gray);
+    color: var(--color-background);
+}
+
+nav ul li:nth-child(1) {
     border-color: var(--color1);
 }
 
-nav > ul > li:nth-child(2){
+nav ul li:nth-child(2) {
     border-color: var(--color2);
 }
 
-nav > ul > li:nth-child(3){
+nav ul li:nth-child(3) {
     border-color: var(--color3);
 }
 
-nav > ul > li:nth-child(4){
+nav ul li:nth-child(4) {
     border-color: var(--color4);
 }
 
-nav > ul > li:nth-child(5){
+nav ul li:nth-child(5) {
     border-color: var(--color5);
 }
 
-nav > ul > li:nth-child(6){
+nav ul li:nth-child(6) {
     border-color: var(--color6);
+}
+
+#related {
+    background-color: var(--color-gray);
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--color-background);
+    padding: 1rem;
+}
+
+#related > article > h1:first-of-type {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#related > article > h1 {
+    margin-bottom: 1rem;
+}
+
+#related > article > p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+img {
+    display: block;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    width: 100%;
 }
