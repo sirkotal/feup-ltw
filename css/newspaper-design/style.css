@@ -25,11 +25,16 @@
     padding: 0;
 }
 
-h1,h2 {
+h1 {
     font-family: var(--sans-font);
+    font-weight: 700;
+    color: var(--color-background);
 }
 
-a {
+h2 {
+    font-family: var(--sans-font);
+    font-weight: 400;
+    margin-bottom: 1rem;
     color: var(--color-background);
 }
 
@@ -37,6 +42,31 @@ body {
     font-family: var(--serif-font);
 }
 
+nav {
+    background-color: white;
+    font-family: var(--sans-font);
+    text-align: center;
+}
+
 ul, ol {
     list-style: none;
+}
+
+body > header:first-of-type {
+    background-color: var(--color-header);
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    border-bottom: var(--color1);
+    padding: 1rem;
+}
+
+#signup > a:first-child {
+    border-right: 0.1rem solid white;
+}
+
+#signup > a {
+    color: var(--color-background);
+    padding: 1rem;
+    padding-inline: 12px;
 }
