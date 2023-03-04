@@ -61,6 +61,12 @@ body > header:first-of-type {
     padding: 1rem;
 }
 
+body > footer {
+    background-color: var(--color-gray);
+    color: var(--color-background);
+    padding: 16px;
+}
+
 #signup > * {
     font-family: var(--sans-font);
     border-right: 1px solid white;
@@ -69,7 +75,7 @@ body > header:first-of-type {
 
 #signup > a {
     color: var(--color-background);
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
 }
 
 #signup > a:hover {
@@ -151,9 +157,9 @@ nav ul li:nth-child(6) {
     margin-top: 1rem;
 }
 
-img {
+#news article img {
     display: block;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
 }
