@@ -143,9 +143,8 @@ nav ul li:nth-child(6) {
     padding: 1rem;
 }
 
-#related > article > h1:first-of-type {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+#related > article {
+    margin-block: 1rem;
 }
 
 #related > article > h1 {
@@ -157,9 +156,41 @@ nav ul li:nth-child(6) {
     margin-top: 1rem;
 }
 
+#news > article > footer {
+    background-color: var(--color-footer);
+    color: var(--color-background);
+    font-family: var(--font-sans);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.75rem 1rem;
+}
+
+#news > article > footer a {
+    text-decoration: underline;
+}
+
+#news .author::before {
+    content: "By ";
+}
+
+#news .comments::after {
+    content: " comments";
+}
+
 #news article img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 99%;
 }
+
+#news > article > p {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#news > article > p:first-of-type::first-letter {
+    font-size: 2rem;
+}
+
