@@ -1,0 +1,9 @@
+:root {
+    --color-background: #edeff0;
+}
+
+body {
+    display: grid;
+    max-width: 60em;
+    min-height: 100%;
+}
