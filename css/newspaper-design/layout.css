@@ -6,4 +6,5 @@ body {
     display: grid;
     max-width: 60em;
     min-height: 100%;
+    margin-inline: auto;
 }
