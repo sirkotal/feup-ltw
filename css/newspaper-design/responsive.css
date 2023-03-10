@@ -1,0 +1,13 @@
+@media screen and (max-width: 60em) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    #related {
+        display: none;
+    }
+
+    #news article {
+        margin: 0;
+    }
+}
