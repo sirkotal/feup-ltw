@@ -47,6 +47,7 @@ nav {
     background-color: white;
     font-family: var(--sans-font);
     text-align: center;
+    width: 100%;
 }
 
 ul, ol {
@@ -102,7 +103,6 @@ body > footer {
 
 nav {
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
 }
 
 nav ul li {
@@ -141,8 +141,6 @@ nav ul li:nth-child(6) {
 
 #related {
     background-color: var(--color-gray);
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
     margin-right: 0.5rem;
     color: var(--color-background);
     padding: 1rem;
@@ -161,12 +159,18 @@ nav ul li:nth-child(6) {
     margin-top: 1rem;
 }
 
+#news {
+    margin-left: 0.5rem;
+}
+
+#news article {
+    background-color: white;
+}
+
 #news > article > footer {
     background-color: var(--color-footer);
     color: var(--color-background);
     font-family: var(--font-sans);
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     padding: 0.75rem 1rem;
 }
 
@@ -205,6 +209,7 @@ nav ul li:nth-child(6) {
     text-shadow: 0.25rem 0.25rem 0.25rem black;
     position: absolute;
     padding: 2rem 2rem;
+    width: 30%;
 }
 
 #news > article > p:first-of-type::first-letter {
