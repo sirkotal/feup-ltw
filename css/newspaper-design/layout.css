@@ -8,3 +8,11 @@ body {
     min-height: 100%;
     margin-inline: auto;
 }
+
+body > header > h1 {
+    grid-area: title;
+}
+
+body > header > h2 {
+    grid-area: subtitle;
+}
