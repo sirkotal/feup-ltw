@@ -47,7 +47,6 @@ nav {
     background-color: white;
     font-family: var(--sans-font);
     text-align: center;
-    width: 100%;
 }
 
 ul, ol {
@@ -56,9 +55,7 @@ ul, ol {
 
 body > header:first-of-type {
     background-color: var(--color-header);
-    margin-left: 0.5rem;
     margin-top: 0.5rem;
-    margin-right: 0.5rem;
     border-bottom: var(--color1);
     padding: 1rem;
 }
@@ -67,8 +64,6 @@ body > footer {
     background-color: var(--color-gray);
     color: var(--color-background);
     padding: 16px;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -98,10 +93,6 @@ body > footer {
 
 #menu input {
     display: none;
-}
-
-nav {
-    margin-left: 0.5rem;
 }
 
 nav ul li {
@@ -140,7 +131,6 @@ nav ul li:nth-child(6) {
 
 #related {
     background-color: var(--color-gray);
-    margin-right: 0.5rem;
     color: var(--color-background);
     padding: 1rem;
 }
@@ -156,10 +146,6 @@ nav ul li:nth-child(6) {
 #related > article > p {
     margin-bottom: 1rem;
     margin-top: 1rem;
-}
-
-#news {
-    margin-left: 0.5rem;
 }
 
 #news article {
