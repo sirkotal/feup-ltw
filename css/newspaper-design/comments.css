@@ -115,5 +115,5 @@
     cursor: pointer;
     background-color: white;
     color: black;
-    transition: color 2s background-color 2s transform 2s;
+    transition: 1s;
 }    

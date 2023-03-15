@@ -1,0 +1,23 @@
+@media (max-width: 30em) {
+    #register {
+      background-color: white;
+    }
+    
+    #login {
+        background-color: white;
+      } 
+}
+
+:root {
+    --highlighter: #575757;
+}
+
+#register, #login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    height: 100%;
+}
