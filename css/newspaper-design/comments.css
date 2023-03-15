@@ -1,0 +1,46 @@
+#comments {
+    margin: 1rem;
+}
+
+#comments .comment {
+    display: grid;
+
+    grid-template:
+        "user date" auto
+        "comment comment" auto / auto auto;
+
+    gap: 1rem;
+}
+  
+  
+#comments .user {
+    grid-area: user;
+    font-weight: bold;
+    font-style: italic;
+}
+  
+#comments .user:after {
+    font-weight: normal;
+    font-style: normal;
+    content: ' said:';
+}
+  
+#comments .date {
+    grid-area: date;
+    justify-self: end;
+}
+  
+#comments p {
+    grid-area: comment;
+    background-color: #edeff0;
+    padding: 1rem;
+}
+  
+#comments p:before {
+    content: '\201C';
+    font-size: 3rem;
+    position: relative;
+    top: 1.5rem;
+    line-height: 0.2rem;
+    color: #cccccc;
+}
