@@ -21,3 +21,20 @@
     padding: 2rem;
     height: 100%;
 }
+
+#register h1, #login h1 {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+#register form, #login form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    width: 100%;
+    max-width: 24rem;
+    padding: 2rem;
+    gap: 2rem;
+}
