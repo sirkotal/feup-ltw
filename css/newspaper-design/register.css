@@ -38,3 +38,34 @@
     padding: 2rem;
     gap: 2rem;
 }
+
+#register input, #login input {
+    display: block;
+    background-color: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+
+    padding: 0.25rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+#register input:focus, #login input:focus {
+    background-color: var(--highlighter);
+    color: white;
+    transition: 0.5s;
+}
+
+#register button, #login button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem;
+}
+
+#register button:hover, #login button:hover {
+    cursor: pointer;
+    background-color: var(--highlighter);
+    transition: 1s;
+} 
