@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:600");
+
+:root {
+    --color-header: #046dd5;
+    --color-footer: #f4655f;
+    --color-background: #edeff0;
+    --color-gray: #2a2f33;
+    --color1: #e1493e;
+    --color2: #8aba56;
+    --color3: #5b4282;
+    --color4: #ff8932;
+    --color5: #19b6e9;
+    --color6: #e84c8b;
+    
+    --title-font: 'Poppins', Arial, Helvetica, sans-serif;
+    --serif-font: 'Lora', 'Times New Roman', Times, serif;
+    --sans-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: var(--sans-font);
+    font-weight: 700;
+    color: var(--color-background);
+}
+
+h2 {
+    font-family: var(--sans-font);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--color-background);
+}
+
+body {
+    font-family: var(--serif-font);
+    background-color: var(--color-background);
+}
+
+nav {
+    background-color: white;
+    font-family: var(--sans-font);
+    text-align: center;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body > header:first-of-type {
+    background-color: var(--color-header);
+    margin-top: 0.5rem;
+    border-bottom: var(--color1);
+    padding: 1rem;
+}
+
+body > footer {
+    background-color: var(--color-gray);
+    color: var(--color-background);
+    padding: 16px;
+    margin-bottom: 1rem;
+}
+
+#signup > * {
+    font-family: var(--sans-font);
+    border-right: 1px solid white;
+    padding-inline: 12px;
+}
+
+#signup > a {
+    color: var(--color-background);
+    padding: 0 1rem 0 1rem;
+}
+
+#signup > a:hover {
+    color: var(--color-gray);
+}
+
+#signup > :first-child {
+    padding-left: 0;
+}
+
+#signup > :last-child {
+    border: none;
+    padding-right: 0;
+}
+
+#menu input {
+    display: none;
+}
+
+nav ul li {
+    border-top: 0.3rem solid var(--color1);
+    padding: 1rem;
+}
+
+nav ul li:hover {
+    background-color: var(--color-gray);
+    color: var(--color-background);
+}
+
+nav ul li:nth-child(1) {
+    border-color: var(--color1);
+}
+
+nav ul li:nth-child(2) {
+    border-color: var(--color2);
+}
+
+nav ul li:nth-child(3) {
+    border-color: var(--color3);
+}
+
+nav ul li:nth-child(4) {
+    border-color: var(--color4);
+}
+
+nav ul li:nth-child(5) {
+    border-color: var(--color5);
+}
+
+nav ul li:nth-child(6) {
+    border-color: var(--color6);
+}
+
+#related {
+    background-color: var(--color-gray);
+    color: var(--color-background);
+    padding: 1rem;
+}
+
+#related > article {
+    margin-block: 1rem;
+}
+
+#related > article > h1 {
+    margin-bottom: 1rem;
+}
+
+#related > article > p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#news article {
+    background-color: white;
+}
+
+#news > article > footer {
+    background-color: var(--color-footer);
+    color: var(--color-background);
+    font-family: var(--font-sans);
+    padding: 0.75rem 1rem;
+}
+
+#news > article:last-child > footer {
+    margin-bottom: 1rem;
+}
+
+#news > article > footer a {
+    text-decoration: underline;
+}
+
+#news .author::before {
+    content: "By ";
+}
+
+#news .comments::after {
+    content: " comments";
+}
+
+#news article img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98.5%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#news > article > p {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#news > article > header {
+    color: var(--color-background);
+    font-size: 2rem;
+    font-family: var(--font-title);
+    text-shadow: 0.25rem 0.25rem 0.25rem black;
+    position: absolute;
+    padding: 2rem 2rem;
+    width: 30%;
+}
+
+#news > article > p:first-of-type::first-letter {
+    font-size: 2rem;
+}
+

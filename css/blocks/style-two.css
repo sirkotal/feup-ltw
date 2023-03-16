@@ -1,0 +1,28 @@
+:root {
+    --color-orange: #f9c74f;
+}
+
+main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 38rem;
+    border-right: 22rem solid var(--color-orange);
+}
+  
+body aside {
+    float: right;
+    width: 20rem;
+}
+  
+main > section article {
+    width: 8rem;
+    float: left;
+}
+  
+main section::after {
+    content: "\00a0";
+    clear: both;
+    display: block;
+    height: 0;
+}

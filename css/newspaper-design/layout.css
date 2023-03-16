@@ -1,0 +1,96 @@
+:root {
+    --color-background: #edeff0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    max-width: 60em;
+    min-height: 100%;
+    margin-inline: auto;
+
+    grid-template:
+        "header header" min-content
+        "nav related" min-content
+        "news related" 1fr                        /* 1fr ≈ 25% */
+        "footer footer" min-content
+        / auto 20%;
+}
+
+body > header {
+    grid-area: header;
+    display: grid;
+    position: relative;
+    padding: 1rem;
+
+    grid-template:
+        "main signup" auto
+        "secondary signup" auto
+        / auto calc((20%) - 1.6rem);
+}
+
+body > header > h1 {
+    grid-area: main;
+}
+
+body > header > h2 {
+    grid-area: secondary;
+}
+
+body > footer {
+    grid-area: footer;
+}
+
+#signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    min-width: 100%;
+
+    grid-area: signup;
+    align-self: end;
+    justify-self: end;
+}
+
+nav {
+    grid-area: nav;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li{
+    flex: 1;
+}
+
+#related {
+    grid-area: related;
+}
+
+#news {
+    grid-area: news;
+}
+
+#news > article > header {
+    position: absolute;
+    width: 21ch;      /* 1ch = 1 "0" in the selected font */
+    padding: 1.5rem;
+}
+
+#news > article > img {
+    width: 100%;
+}
+
+#news > article > footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.author {
+    flex: 1;
+}
