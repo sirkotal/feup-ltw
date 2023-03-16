@@ -1,0 +1,119 @@
+#comments {
+    margin: 1rem;
+}
+
+#comments > h1 {
+    color: black;
+    margin-bottom: 0.7rem;
+}
+
+#comments .comment {
+    display: grid;
+
+    grid-template:
+        "user date" auto
+        "comment comment" auto / auto auto;
+
+    gap: 0.5rem;
+}
+  
+  
+#comments .user {
+    grid-area: user;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 0.8rem;
+}
+  
+#comments .user:after {
+    font-weight: normal;
+    font-style: normal;
+    content: ' said:';
+}
+  
+#comments .date {
+    grid-area: date;
+    justify-self: end;
+    margin-top: 0.8rem;
+}
+  
+#comments p {
+    grid-area: comment;
+    background-color: #edeff0;
+    padding: 1rem;
+}
+  
+#comments p:before {
+    content: '\201C';
+    font-size: 3rem;
+    position: relative;
+    top: 1.5rem;
+    line-height: 0.2rem;
+    color: #cccccc;
+}
+
+#comments form {
+    margin-top: 1rem;
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+    background-color: #edeff0;
+}
+  
+#comments form h2 {
+    color: black;
+    font-weight: bolder;
+    padding-top: 0.8rem;
+    font-size: 1rem;
+    grid-column-end: span 4;
+}
+  
+#comments form input {
+    background-color: white;
+    height: 2rem;
+}
+  
+#comments form textarea {
+    display: block;
+    width: 100%;
+  
+    margin: 0 auto;
+    padding: 0;
+  
+    height: 6em;
+}
+  
+#comments form label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-end: span 2;
+    gap: 1rem;
+    align-items: center;
+}
+  
+#comments form label:last-of-type {
+    grid-column-end: span 4;
+    grid-template-columns: auto 1fr;
+}
+  
+#comments form button {
+    width: auto;
+  
+    grid-column-start: 4;
+  
+    background-color: black;
+    color: white;
+  
+    border: none;
+    padding: 1rem;
+}
+
+#comments form button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: 1s;
+}    
