@@ -1,14 +1,9 @@
 <?php
-$query = 'SELECT news.*, users.*, COUNT(comments.id) AS comments
-FROM news JOIN users USING (username) LEFT JOIN comments ON comments.news_id = news.id
-GROUP BY news.id, users.username
-ORDER BY published DESC';
+require_once('./database/connection.php');
+require_once('./database/news.php');
 
-$db = new PDO('sqlite:../sqlite-db-creation/news.db');
-
-$stmt = $db->prepare($query);
-$stmt->execute();
-$articles = $stmt->fetchAll();
+$db = getDatabaseConnection();
+$articles = getAllNews($db);
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +12,11 @@ $articles = $stmt->fetchAll();
     <title>Super Legit News</title>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="responsive.css" rel="stylesheet">
-    <link href="comments.css" rel="stylesheet">
-    <link href="register.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/layout.css" rel="stylesheet">
+    <link href="style/responsive.css" rel="stylesheet">
+    <link href="style/comments.css" rel="stylesheet">
+    <link href="style/register.css" rel="stylesheet">
   </head>
   <body>
     <header>

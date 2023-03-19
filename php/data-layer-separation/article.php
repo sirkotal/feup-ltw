@@ -1,13 +1,11 @@
 <?php
-$db = new PDO('sqlite:../sqlite-db-creation/news.db');
+require_once('./database/connection.php');
+require_once('./database/news.php');
 
-$article_stmt = $db->prepare('SELECT * FROM news JOIN users USING (username) WHERE id = ?');
-$article_stmt->execute(array($_GET['id']));
-$article = $article_stmt->fetch();
+$id = (int)($_GET['id']);
 
-$comment_stmt = $db->prepare('SELECT * FROM comments JOIN users USING (username) WHERE news_id = ?');
-$comment_stmt->execute(array($_GET['id']));
-$comments = $comment_stmt->fetchAll();
+$db = getDatabaseConnection();
+$article = getArticle($db, $id);
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +15,11 @@ $comments = $comment_stmt->fetchAll();
     <title>Super Legit News</title>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="responsive.css" rel="stylesheet">
-    <link href="comments.css" rel="stylesheet">
-    <link href="register.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/layout.css" rel="stylesheet">
+    <link href="style/responsive.css" rel="stylesheet">
+    <link href="style/comments.css" rel="stylesheet">
+    <link href="style/register.css" rel="stylesheet">
 </head>
 
 <body>
