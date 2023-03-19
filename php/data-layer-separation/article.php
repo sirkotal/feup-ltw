@@ -1,11 +1,13 @@
 <?php
 require_once('./database/connection.php');
 require_once('./database/news.php');
+require_once('./database/comments.php');
 
 $id = (int)($_GET['id']);
 
 $db = getDatabaseConnection();
 $article = getArticle($db, $id);
+$comments = getComments($db, $id);
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +85,6 @@ $article = getArticle($db, $id);
               $text = $article['fulltext'];
               $tags = $article['tags'];
               $published = $article['published'];
-              $name = $article['name'];
         ?>
         <article>
             <header>
@@ -131,6 +132,7 @@ $article = getArticle($db, $id);
                 </form>
             </section>
             <footer>
+                <?php $name = $article['name'];?>
                 <span class="author"><?= $name ?></span>
                 <span class="tags">
                     <?php foreach (explode(',', $tags) as $tag) { ?>
@@ -138,7 +140,7 @@ $article = getArticle($db, $id);
                     <?php } ?>
                 </span>
                 <span class="date"><?= date('F j', $published) ?></span>
-                <a class="comments" href="article.php?id=<?= $id ?>#comments"><?= $comments ?></a>
+                <a class="comments" href="article.php?id=<?= $id ?>#comments"><?= count($comments) ?></a>
             </footer>
         </article>
     </section>

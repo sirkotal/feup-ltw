@@ -85,7 +85,6 @@ $comments = $comment_stmt->fetchAll();
               $text = $article['fulltext'];
               $tags = $article['tags'];
               $published = $article['published'];
-              $name = $article['name'];
         ?>
         <article>
             <header>
@@ -133,6 +132,7 @@ $comments = $comment_stmt->fetchAll();
                 </form>
             </section>
             <footer>
+                <?php $name = $article['name'];?>
                 <span class="author"><?= $name ?></span>
                 <span class="tags">
                     <?php foreach (explode(',', $tags) as $tag) { ?>
@@ -140,7 +140,7 @@ $comments = $comment_stmt->fetchAll();
                     <?php } ?>
                 </span>
                 <span class="date"><?= date('F j', $published) ?></span>
-                <a class="comments" href="article.php?id=<?= $id ?>#comments"><?= $comments ?></a>
+                <a class="comments" href="article.php?id=<?= $id ?>#comments"><?= count($comments) ?></a>
             </footer>
         </article>
     </section>
