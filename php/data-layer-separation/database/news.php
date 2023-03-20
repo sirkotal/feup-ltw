@@ -6,7 +6,7 @@ FROM news JOIN users USING (username) LEFT JOIN comments ON comments.news_id = n
 GROUP BY news.id, users.username
 ORDER BY published DESC';
 
-const query_article = 'SELECT * FROM news WHERE id = ?';
+const query_article = 'SELECT * FROM news JOIN users USING (username) WHERE id = ?';
 
 function getAllNews(PDO $db) {
     $stmt = $db->prepare(query_news);
