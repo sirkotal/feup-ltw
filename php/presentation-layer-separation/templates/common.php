@@ -3,19 +3,6 @@
 declare(strict_types=1);
 
 function output_header() { ?>
-    <!DOCTYPE html>
-    <html lang="en-US">
-    <head>
-        <title>Super Legit News</title>    
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style/style.css" rel="stylesheet">
-        <link href="style/layout.css" rel="stylesheet">
-        <link href="style/responsive.css" rel="stylesheet">
-        <link href="style/comments.css" rel="stylesheet">
-        <link href="style/register.css" rel="stylesheet">
-    </head>
-    <body>
     <header>
       <h1><a href="#">Super Legit News</a></h1>
       <h2><a href="#">Where fake news are born!</a></h2>
@@ -55,9 +42,7 @@ function output_header() { ?>
 <?php }
 
 function output_footer() { ?>
-        <footer>
-            <p>&copy; Fake News, 2022</p>
-        </footer>
-    </body>
-</html>
+  <footer>
+    <p>&copy; Fake News, 2022</p>
+  </footer>
 <?php } ?>

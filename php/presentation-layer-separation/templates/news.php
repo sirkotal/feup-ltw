@@ -55,7 +55,10 @@ function output_article_footer($article) {
   </footer>
 <?php } ?>
 
-<?php function output_articles($articles) {
-    foreach ($articles as $article)
-        output_article($article);
-} ?>
+<?php function output_articles($articles) { ?>
+  <section id="news">
+    <?php foreach ($articles as $article) { ?>
+      <?php output_article($article) ?>
+    <?php } ?>
+  </section>  
+<?php } ?>
