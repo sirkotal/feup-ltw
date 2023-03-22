@@ -86,7 +86,7 @@ $articles = getAllNews($db);
             <?php } ?>
           </span>
           <span class="date"><?= date('F j', $published) ?></span>
-          <a class="comments" href="article.php?id=<?= $id ?>#comments"><?= $comments ?></a>
+          <a class="comments" href="article.php?id=<?= $id ?> #comments"><?= $comments ?></a>
         </footer>
       </article>
       <?php } ?>
