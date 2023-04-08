@@ -15,11 +15,11 @@ function output_header() { ?>
   </head>
   <body>
     <header>
-      <h1><a href="#">Super Legit News</a></h1>
+      <h1><a href="index.php">Super Legit News</a></h1>
       <h2><a href="#">Where fake news are born!</a></h2>
       <div id="signup">
-        <a href="register.html">Register</a>
-        <a href="login.html">Login</a>
+        <a href="register.php">Register</a>
+        <a href="login.php">Login</a>
       </div>
     </header>
     <nav id="menu">
