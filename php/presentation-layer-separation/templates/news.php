@@ -1,8 +1,8 @@
 <?php
+  require_once('templates/comments.php');
+?>
 
-declare(strict_types=1);
-
-function output_article($article, $comments = null) { 
+<?php function output_article($article, $comments = null) { 
     $id = $article['id'];
     $title = $article['title'];
     $introduction = $article['introduction'];
@@ -25,7 +25,7 @@ function output_article($article, $comments = null) {
       <p><?= $p ?></p>
     <?php } ?>
 
-    <?php if ($comments !== null) { 
+    <?php if (isset($comments)) { 
             output_comments($comments);
     }
 

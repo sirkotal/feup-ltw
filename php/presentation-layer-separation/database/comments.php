@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-const comments_query = 'SELECT * FROM comments WHERE news_id = ?';
+const comments_query = 'SELECT * FROM comments JOIN users USING (username) WHERE news_id = ?';
 
 function getComments(PDO $db, int $id) {
     $stmt = $db->prepare(comments_query);
