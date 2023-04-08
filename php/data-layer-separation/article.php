@@ -106,7 +106,7 @@ $comments = getComments($db, $id);
                 foreach ($comments as $comment) {
                     $username = $comment['username'];
                     $date = $comment['published'];
-                    $content = $comment['text']
+                    $content = $comment['text'];
                 ?>
 
                     <article class="comment">
@@ -140,7 +140,7 @@ $comments = getComments($db, $id);
                     <?php } ?>
                 </span>
                 <span class="date"><?= date('F j', $published) ?></span>
-                <a class="comments" href="article.php?id=<?= $id ?>#comments"><?= count($comments) ?></a>
+                <a class="comments" href="article.php?id=<?= $id ?> #comments"><?= count($comments) ?></a>
             </footer>
         </article>
     </section>
