@@ -23,6 +23,10 @@ body {
   margin: 0;
 }
 
+#products article.sale {
+  background-color: #ffddd2;
+}
+
 #products article .price::after {
   content: "€";
 }

@@ -4,6 +4,6 @@ function changeAllArticleColors() {
     for (const article of articles) {
       article.classList.add("sale");
     }
-  }
+}
 
-  changeAllArticleColors()
+changeAllArticleColors()
