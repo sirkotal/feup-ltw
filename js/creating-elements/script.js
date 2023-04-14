@@ -20,29 +20,46 @@ function attachBuyEvents() {
       
       const total = parseInt(quantity) * parseInt(price);
 
-      // Creates a new table row (element) and table cells
-      const row = document.createElement("tr");
-      const idCell = document.createElement("td");
-      const nameCell = document.createElement("td");
-      const priceCell = document.createElement("td");
-      const quantityCell = document.createElement("td");
-      const totalCell = document.createElement("td");
+      const table = document.querySelector("#cart table tbody");
+      const foot = document.querySelector("#cart table tfoot tr th:last-child");
 
-      // Set cell values
-      idCell.textContent = dataID;
-      nameCell.textContent = name;
-      priceCell.textContent = price;
-      quantityCell.textContent = quantity;
-      totalCell.textContent = total;
+      const existingRow = document.querySelector(`#cart tr[data-id='${dataID}']`);
 
-      row.appendChild(idCell);
-      row.appendChild(nameCell);
-      row.appendChild(priceCell);
-      row.appendChild(quantityCell);
-      row.appendChild(totalCell);
+      if (existingRow) {
+        // Update existing row's values
+        existingRow.children[2].textContent = parseInt(existingRow.children[2].textContent) + parseInt(quantity);
+        existingRow.children[4].textContent = parseInt(existingRow.children[4].textContent) + parseInt(total);
+        foot.textContent = parseInt(foot.textContent) + parseInt(total);
+      } 
+      
+      else {
+        // Creates a new table row (element) and table cells
+        const row = document.createElement("tr");
+        const idCell = document.createElement("td");
+        const nameCell = document.createElement("td");
+        const priceCell = document.createElement("td");
+        const quantityCell = document.createElement("td");
+        const totalCell = document.createElement("td");
 
-      const table = document.querySelector("#cart thead");
-      table.appendChild(row);
+        // Set cell values
+        idCell.textContent = dataID;
+        nameCell.textContent = name;
+        priceCell.textContent = price;
+        quantityCell.textContent = quantity;
+        totalCell.textContent = total;
+        
+        row.dataset.id = dataID
+        row.appendChild(idCell);
+        row.appendChild(nameCell);
+        row.appendChild(quantityCell);
+        row.appendChild(priceCell);
+        row.appendChild(totalCell);
+
+        foot.textContent = parseInt(foot.textContent) + parseInt(total);
+
+        const table = document.querySelector("#cart tbody");
+        table.appendChild(row);
+    }
 
       // Toggle the "sale" class on the parent article
       parentArticle.classList.toggle("sale");
