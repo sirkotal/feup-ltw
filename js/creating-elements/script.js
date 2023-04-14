@@ -17,10 +17,8 @@ function attachBuyEvents() {
       const price = priceElement.textContent;
       const quantity = quantityElement.value;
 
-      // Print the retrieved values in the console
-      console.log("Product Name: ", name);
-      console.log("Product Price: ", price);
-      console.log("Product Quantity: ", quantity);
+      // Creates a new table row (element)
+      const row = document.createElement("tr");
 
       // Toggle the "sale" class on the parent article
       parentArticle.classList.toggle("sale");
