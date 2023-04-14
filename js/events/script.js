@@ -9,4 +9,4 @@ function attachBuyEvents() {
     }
 }
   
-attachBuyEvents()
+attachBuyEvents();
