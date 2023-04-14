@@ -17,8 +17,23 @@ function attachBuyEvents() {
       const price = priceElement.textContent;
       const quantity = quantityElement.value;
 
-      // Creates a new table row (element)
+      // Creates a new table row (element) and table cells
       const row = document.createElement("tr");
+      const nameCell = document.createElement("td");
+      const priceCell = document.createElement("td");
+      const quantityCell = document.createElement("td");
+
+      // Set cell values
+      nameCell.textContent = name;
+      priceCell.textContent = price;
+      quantityCell.textContent = quantity;
+
+      row.appendChild(nameCell);
+      row.appendChild(priceCell);
+      row.appendChild(quantityCell);
+
+      const table = document.querySelector("#cart table thead");
+      table.appendChild(row);
 
       // Toggle the "sale" class on the parent article
       parentArticle.classList.toggle("sale");
