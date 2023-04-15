@@ -40,6 +40,16 @@ function attachBuyEvents() {
         const priceCell = document.createElement("td");
         const quantityCell = document.createElement("td");
         const totalCell = document.createElement("td");
+        const deleteCell = document.createElement("td");
+
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+
+        removeButton.addEventListener("click", (event) => {
+          const deleteRow = event.currentTarget.parentElement.parentElement;;
+          foot.textContent = parseInt(foot.textContent) - parseInt(deleteRow.children[4].textContent);
+          deleteRow.remove();
+        });
 
         // Set cell values
         idCell.textContent = dataID;
@@ -47,13 +57,17 @@ function attachBuyEvents() {
         priceCell.textContent = price;
         quantityCell.textContent = quantity;
         totalCell.textContent = total;
+        deleteCell.appendChild(removeButton);
         
+        // Adds a data-id property to a table row
         row.dataset.id = dataID
+        
         row.appendChild(idCell);
         row.appendChild(nameCell);
         row.appendChild(quantityCell);
         row.appendChild(priceCell);
         row.appendChild(totalCell);
+        row.appendChild(deleteCell);
 
         foot.textContent = parseInt(foot.textContent) + parseInt(total);
 
@@ -65,7 +79,7 @@ function attachBuyEvents() {
       parentArticle.classList.toggle("sale");
 
       // Get the value of the data-id attribute and print it in the console
-      console.log("data-id: ", dataID);
+      console.log("data-id: ", dataID);  
     });
   }
 }
