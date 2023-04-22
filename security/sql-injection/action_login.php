@@ -6,8 +6,8 @@
   $username = $_POST['username'];
   $password = sha1($_POST['password']);
 
-  $stmt = $db->prepare("SELECT * FROM users WHERE username = '$username' AND password = '$password'");
-  $stmt->execute();
+  $stmt = $db->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
+  $stmt->execute(array(':username' => $username, ':password' => $password));
 
   $user = $stmt->fetch();
 
