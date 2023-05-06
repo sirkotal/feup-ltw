@@ -3,7 +3,7 @@ CREATE TABLE users (
   password VARCHAR NOT NULL
 );
 
-INSERT INTO users VALUES ('johndoe', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220');
-INSERT INTO users VALUES ('janedoe', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
-INSERT INTO users VALUES ('marydoe', '7c4a8d09ca3762af61e59520943dc26494f8941b');
-INSERT INTO users VALUES ('jackdoe', '7c4a8d09ca3762af61e59520943dc26494f8941b');
+INSERT INTO users VALUES ('johndoe', '$2y$10$c/JQ.PEWDhSjlyeTHA3FMeNTk4hR.3p1QnwS1QmDd75kUzT9ZkI/m');
+INSERT INTO users VALUES ('janedoe', '$2y$10$q0R/MLy2CsM1o/rzbmZb5Or80bx5oCcnNL60QOjIIBU3COq6wWrA6');
+INSERT INTO users VALUES ('marydoe', '$2y$10$awJ5W9nt9iBeExdABgs9MOhYc5FvnBamjwgqM3PaKdNuTeKhwSufu');
+INSERT INTO users VALUES ('jackdoe', '$2y$10$BCczLtMa2wvV152ESsX.xOjQn2g0qlBwJsiauZToAHJPpweF.lrJ.');
