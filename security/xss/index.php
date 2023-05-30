@@ -23,8 +23,8 @@
     <section id="comments">
       <?php foreach ($comments as $comment) { ?>
         <article>
-          <p><?=$comment['text']?></p>
-          <small>&mdash; <?=$comment['author']?></small>
+          <p><?=htmlentities($comment['text'])?></p>
+          <small>&mdash; <?=htmlentities($comment['author'])?></small>
         </article>
       <?php } ?>
     </section>
